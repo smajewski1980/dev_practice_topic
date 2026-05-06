@@ -1,0 +1,34 @@
+:root {
+  --body-font-family:
+    "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+  --title-font-family: "Noto Sans Georgian", sans-serif;
+  --body-inline-padding: 4rem;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font-family);
+  padding-block: 1rem;
+  color: #fff;
+
+  /* for now */
+  background-color: #ccc;
+}
+
+a {
+  text-decoration: none;
+
+  &:visited {
+    color: currentColor;
+  }
+}
+
+h1 {
+  font-family: var(--title-font-family);
+}

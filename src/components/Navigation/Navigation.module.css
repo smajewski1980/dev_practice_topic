@@ -1,0 +1,54 @@
+.navigationWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: var(--body-inline-padding);
+}
+
+.logo {
+  max-width: 150px;
+}
+
+.navLinks {
+  display: flex;
+  gap: 1.5rem;
+  list-style-type: none;
+  /* the ::after visually makes it look not centered because its out of the flow */
+  /* slight adj to eyeball it to center */
+  transform: translateX(-1.25rem);
+
+  li {
+    cursor: pointer;
+  }
+}
+
+.activeNavLink {
+  color: hsl(from currentColor h s calc(l - 50));
+}
+
+.navDropdown {
+  position: relative;
+}
+
+.navDropdown::after {
+  content: "\2304";
+  font-size: 1.5rem;
+  position: absolute;
+  top: -0.9rem;
+  right: -1.125rem;
+}
+
+.profileIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: #fff;
+  padding: 0.75rem;
+  border-radius: 50%;
+
+  img {
+    max-width: 100%;
+  }
+}
+/* * {
+  outline: 2px solid lime;
+} */
