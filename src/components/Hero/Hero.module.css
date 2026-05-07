@@ -1,0 +1,53 @@
+.sectionHero {
+  background-color: var(--secondary-color);
+}
+
+.heroInputSection {
+  padding-block: 8rem 3rem;
+  text-align: center;
+  background-image: radial-gradient(
+    at top right,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    color: var(--primary-color);
+  }
+
+  .inputWrapper {
+    margin-block-start: 1rem;
+    background-color: white;
+    min-width: fit-content;
+    max-width: 600px;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    border-radius: 100vw;
+
+    img {
+      width: 1rem;
+      opacity: 0.75;
+      margin-inline-end: 0.75rem;
+    }
+
+    input {
+      min-width: 300px;
+      border: none;
+    }
+
+    button {
+      margin-inline-start: auto;
+      padding: 0.6rem 1.5rem;
+      border-radius: 100vw;
+      color: white;
+      border: none;
+      background-color: var(--secondary-color);
+    }
+  }
+}

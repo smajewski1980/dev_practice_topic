@@ -25,7 +25,7 @@
 }
 
 .activeNavLink {
-  color: hsl(from currentColor h s calc(l - 50));
+  color: hsl(from currentColor h s calc(l - 75));
 }
 
 .navDropdown {
@@ -36,7 +36,7 @@
   content: "\2304";
   font-size: 1.5rem;
   position: absolute;
-  top: -0.95rem;
+  top: -0.9rem;
   right: -1.125rem;
 }
 

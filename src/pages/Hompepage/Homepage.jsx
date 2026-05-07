@@ -1,8 +1,12 @@
-import React from "react";
+import Hero from "../../components/Hero/Hero";
 import styles from "./Homepage.module.css";
 
 const Homepage = () => {
-  return <h1>Homepage</h1>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 };
 
 export default Homepage;

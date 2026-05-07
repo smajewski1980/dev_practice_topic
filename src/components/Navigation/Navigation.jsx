@@ -20,10 +20,12 @@ const Navigation = () => {
 
   useEffect(() => {
     if (scrollRef.current) {
-      scrollRef.current.className =
-        scrollHeight > 0
-          ? `${styles.fixedNav} ${styles.navigationWrapper}`
-          : styles.navigationWrapper;
+      document.startViewTransition(() => {
+        scrollRef.current.className =
+          scrollHeight > 0
+            ? `${styles.fixedNav} ${styles.navigationWrapper}`
+            : styles.navigationWrapper;
+      });
     }
   }, [scrollHeight]);
 
