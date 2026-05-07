@@ -4,7 +4,28 @@ import { useEffect, useRef, useState } from "react";
 
 const Navigation = () => {
   let navRef = useRef(null);
+  let scrollRef = useRef(null);
+
   const [target, setTarget] = useState(null);
+  const [scrollHeight, setScrollHeight] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollHeight(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.className =
+        scrollHeight > 0
+          ? `${styles.fixedNav} ${styles.navigationWrapper}`
+          : styles.navigationWrapper;
+    }
+  }, [scrollHeight]);
 
   useEffect(() => {
     if (target) {
@@ -23,7 +44,10 @@ const Navigation = () => {
   }
 
   return (
-    <div className={styles.navigationWrapper}>
+    <div
+      ref={scrollRef}
+      className={styles.navigationWrapper}
+    >
       <img
         src='/images/logo.png'
         alt='Topic logo'

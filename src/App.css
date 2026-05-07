@@ -3,6 +3,16 @@
     "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, sans-serif;
   --title-font-family: "Noto Sans Georgian", sans-serif;
   --body-inline-padding: 4rem;
+  --white-color: #ffffff;
+  --primary-color: #13547a;
+  --secondary-color: #80d0c7;
+  --section-bg-color: #f0f8ff;
+  --custom-btn-bg-color: #80d0c7;
+  --custom-btn-bg-hover-color: #13547a;
+  --dark-color: #000000;
+  --p-color: #717275;
+  --border-color: #7fffd4;
+  --link-hover-color: #13547a;
 }
 
 *,
@@ -14,11 +24,11 @@
 
 body {
   font-family: var(--body-font-family);
-  padding-block: 1rem;
+  /* padding-block: 1rem; */
   color: #fff;
 
   /* for now */
-  background-color: #ccc;
+  background-color: #aaa;
   min-height: 2000px;
 }
 
@@ -32,4 +42,5 @@ a {
 
 h1 {
   font-family: var(--title-font-family);
+  display: none;
 }
