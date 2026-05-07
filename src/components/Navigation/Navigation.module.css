@@ -5,6 +5,7 @@
   position: fixed;
   width: 100dvw;
   padding-block: 1rem;
+  z-index: 999;
 }
 
 .logo {

@@ -1,0 +1,44 @@
+.ctaCard {
+  max-width: 500px;
+  position: relative;
+  isolation: isolate;
+  border-radius: var(--card-b-rad);
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.socialWrapper {
+  display: flex;
+
+  .iconWrapper {
+    display: flex;
+    img {
+      max-width: 2rem;
+    }
+  }
+}
+
+.ctaCardBg {
+  &::after {
+    content: "";
+    background-image: url("/images/businesswoman-using-tablet-analysis.jpg");
+    background-size: cover;
+    filter: brightness(50%);
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+  }
+  &::before {
+    content: "";
+    /* background-color: hsl(from var(--secondary-color) h s l / 0.75); */
+    background-image: radial-gradient(
+      at top right,
+      var(--secondary-color),
+      var(--primary-color)
+    );
+    opacity: 0.65;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+}

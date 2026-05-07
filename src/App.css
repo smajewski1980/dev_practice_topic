@@ -13,6 +13,7 @@
   --p-color: #717275;
   --border-color: #7fffd4;
   --link-hover-color: #13547a;
+  --card-b-rad: 25px;
 }
 
 *,
@@ -22,13 +23,17 @@
   margin: 0;
 }
 
+img {
+  display: block;
+}
+
 body {
   font-family: var(--body-font-family);
   /* padding-block: 1rem; */
   color: #fff;
 
   /* for now */
-  background-color: #aaa;
+  /* background-color: #aaa; */
   min-height: 2000px;
 }
 

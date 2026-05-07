@@ -1,6 +1,10 @@
 import styles from "./Hero.module.css";
+import CardInfo from "../CardInfo/CardInfo";
+import CardCTA from "../CardCTA/CardCTA";
 
 const Hero = () => {
+  const cardInfoText =
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque sequi perspiciatis laborum eum itaque debitis optio nemo deserunt modi alias.";
   return (
     <>
       <section
@@ -25,8 +29,13 @@ const Hero = () => {
           </div>
         </div>
         <div className={styles.heroCardSection}>
-          {/* gonna make 2 types of card component */}
-          {/* the left one will be type a and the right one will be type b */}
+          <CardInfo
+            title={"Web Design"}
+            icon={{ color: "#00B3F4", number: "14" }}
+            text={cardInfoText}
+            img={"/images/topics/undraw_Remote_design_team_re_urdx.png"}
+          />
+          <CardCTA img={true} />
         </div>
       </section>
     </>

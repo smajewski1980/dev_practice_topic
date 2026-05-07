@@ -1,0 +1,30 @@
+.cardInfo {
+  background: white;
+  color: var(--primary-color);
+  max-width: 325px;
+  position: relative;
+  padding: 1.5rem;
+  border-radius: var(--card-b-rad);
+
+  h2 {
+    font-weight: 600;
+  }
+
+  .icon {
+    background-color: var(--clr-icon);
+    color: white;
+    width: fit-content;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  p {
+    max-width: 75%;
+  }
+
+  img {
+    width: 300px;
+    margin-inline: auto;
+  }
+}
