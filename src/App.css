@@ -19,6 +19,7 @@ body {
 
   /* for now */
   background-color: #ccc;
+  min-height: 2000px;
 }
 
 a {

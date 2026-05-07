@@ -1,7 +1,27 @@
 import styles from "./Navigation.module.css";
 import { Link } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
 
 const Navigation = () => {
+  let navRef = useRef(null);
+  const [target, setTarget] = useState(null);
+
+  useEffect(() => {
+    if (target) {
+      const listItems = navRef.current.querySelectorAll("li");
+
+      listItems.forEach((item) => {
+        item.className = "";
+      });
+
+      target.className = styles.activeNavLink;
+    }
+  }, [target]);
+
+  function handleActiveNavLink(e) {
+    setTarget(e.target.parentElement);
+  }
+
   return (
     <div className={styles.navigationWrapper}>
       <img
@@ -10,24 +30,32 @@ const Navigation = () => {
         className={styles.logo}
       />
 
-      <nav>
+      <nav ref={navRef}>
         <ul className={styles.navLinks}>
-          <li className={styles.activeNavLink}>
+          <li
+            onClick={handleActiveNavLink}
+            className={styles.activeNavLink}
+          >
             <a href='#'>HOME</a>
           </li>
-          <li>
-            <a href='#'>BROWSE TOPICS</a>
+          <li onClick={handleActiveNavLink}>
+            <a href='#browse'>BROWSE TOPICS</a>
           </li>
-          <li>
-            <a href='#'>HOW IT WORKS</a>
+          <li onClick={handleActiveNavLink}>
+            <a href='#how'>HOW IT WORKS</a>
           </li>
-          <li>
-            <a href='#'>FAQS</a>
+          <li onClick={handleActiveNavLink}>
+            <a href='#faqs'>FAQS</a>
           </li>
-          <li>
-            <a href='#'>CONTACT</a>
+          <li onClick={handleActiveNavLink}>
+            <a href='#contact'>CONTACT</a>
           </li>
-          <li className={styles.navDropdown}>PAGES</li>
+          <li
+            data-dropdown={true}
+            className={styles.navDropdown}
+          >
+            PAGES
+          </li>
         </ul>
       </nav>
 

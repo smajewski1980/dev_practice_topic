@@ -30,7 +30,7 @@
   position: relative;
 }
 
-.navDropdown::after {
+[data-dropdown="true"]::after {
   content: "\2304";
   font-size: 1.5rem;
   position: absolute;
