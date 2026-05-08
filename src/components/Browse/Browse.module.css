@@ -1,0 +1,29 @@
+.sectionBrowse {
+  color: black;
+  text-align: center;
+  padding-block-start: 3.5rem;
+
+  h2 {
+    font-size: 1.75rem;
+    margin-block-end: 1.5rem;
+  }
+
+  .browseTabList {
+    display: flex;
+    list-style-type: none;
+    gap: 3rem;
+    color: var(--p-color);
+    margin-inline: auto;
+    margin-block-end: 2rem;
+    width: fit-content;
+
+    li {
+      cursor: pointer;
+    }
+  }
+
+  .activeTab {
+    color: black;
+    border-bottom: 2px solid currentColor;
+  }
+}

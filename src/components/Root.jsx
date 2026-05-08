@@ -6,6 +6,7 @@ const Root = () => {
     <>
       <Navigation />
       <Outlet />
+      {/* the footer will go here */}
     </>
   );
 };

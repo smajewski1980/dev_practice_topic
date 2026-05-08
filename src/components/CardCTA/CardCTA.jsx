@@ -1,9 +1,10 @@
 import styles from "../CardCTA.module.css";
 
-const CardCTA = ({ img, icon }) => {
+const CardCTA = ({ img, icon, maxHeight = "none" }) => {
   const { color, number } = icon;
   return (
     <div
+      style={{ "--max-height": maxHeight }}
       className={img ? `${styles.ctaCardBg} ${styles.ctaCard}` : styles.ctaCard}
     >
       <p>Finance</p>

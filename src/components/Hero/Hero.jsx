@@ -34,6 +34,7 @@ const Hero = () => {
             icon={{ color: "#00B3F4", number: "14" }}
             text={cardInfoText}
             img={"/images/topics/undraw_Remote_design_team_re_urdx.png"}
+            maxWidth={"325px"}
           />
           <CardCTA
             img={true}
