@@ -4,7 +4,7 @@ import CardCTA from "../CardCTA/CardCTA";
 
 const Hero = () => {
   const cardInfoText =
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque sequi perspiciatis laborum eum itaque debitis optio nemo deserunt modi alias.";
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque sequi perspiciatis laborum eum.";
   return (
     <>
       <section
