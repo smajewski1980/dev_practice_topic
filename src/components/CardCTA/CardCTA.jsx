@@ -1,12 +1,18 @@
 import styles from "../CardCTA.module.css";
 
-const CardCTA = ({ img }) => {
+const CardCTA = ({ img, icon }) => {
+  const { color, number } = icon;
   return (
     <div
       className={img ? `${styles.ctaCardBg} ${styles.ctaCard}` : styles.ctaCard}
     >
-      <h3>Finance</h3>
-      <span>25</span>
+      <p>Finance</p>
+      <div
+        style={{ "--clr-icon": color }}
+        className={styles.icon}
+      >
+        {number}
+      </div>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum optio
         enim at voluptatum velit culpa beatae quod possimus voluptates

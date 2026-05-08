@@ -35,7 +35,10 @@ const Hero = () => {
             text={cardInfoText}
             img={"/images/topics/undraw_Remote_design_team_re_urdx.png"}
           />
-          <CardCTA img={true} />
+          <CardCTA
+            img={true}
+            icon={{ color: "#0039f4", number: "25" }}
+          />
         </div>
       </section>
     </>
