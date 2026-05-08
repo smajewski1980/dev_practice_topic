@@ -14,6 +14,7 @@
   --border-color: #7fffd4;
   --link-hover-color: #13547a;
   --card-b-rad: 25px;
+  scroll-behavior: smooth;
 }
 
 *,

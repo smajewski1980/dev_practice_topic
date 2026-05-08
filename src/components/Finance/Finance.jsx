@@ -8,16 +8,16 @@ const Finance = () => {
   return (
     <div className={styles.cardWrapper}>
       <CardInfo
-        title={"Advertising"}
+        title={"Investment"}
         icon={{ color: "#00B3F4", number: "30" }}
         text={cardInfoText}
-        img={"/images/topics/undraw_online_ad_re_ol62.png"}
+        img={"/images/topics/undraw_Finance_re_gnv2.png"}
         maxWidth={"500px"}
       />
       <CardCTA
-        img={true}
+        img={false}
         icon={{ color: "#0039f4", number: "25" }}
-        maxHeight={"300px"}
+        maxHeight={"325px"}
       />
     </div>
   );

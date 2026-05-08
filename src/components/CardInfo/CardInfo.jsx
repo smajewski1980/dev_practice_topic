@@ -11,7 +11,7 @@ const CardInfo = ({ title, icon, text, img, maxWidth }) => {
       style={{ "--max-width": maxWidth }}
       className={styles.cardInfo}
     >
-      <h2>{title}</h2>
+      <h3>{title}</h3>
       <div
         style={{ "--clr-icon": color }}
         className={styles.icon}

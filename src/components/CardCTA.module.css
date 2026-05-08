@@ -8,6 +8,13 @@
   max-height: var(--max-height);
   box-shadow: -3px -3px 15px rgb(0 0 0 / 0.4);
   transition: transform 0.25s ease;
+  text-align: left;
+  color: white;
+  background-image: radial-gradient(
+    at top right,
+    var(--secondary-color),
+    var(--primary-color)
+  );
 
   p:first-child:not(.socialWrapper p) {
     font-size: 1.5rem;
