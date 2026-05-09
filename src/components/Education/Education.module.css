@@ -1,0 +1,9 @@
+.cardWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.cardWrapper div:first-child img {
+  width: 100%;
+}
