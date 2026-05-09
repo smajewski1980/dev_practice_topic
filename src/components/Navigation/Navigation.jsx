@@ -1,6 +1,7 @@
 import styles from "./Navigation.module.css";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
+import { throttle } from "lodash";
 
 const Navigation = () => {
   let navRef = useRef(null);
@@ -10,9 +11,9 @@ const Navigation = () => {
   const [scrollHeight, setScrollHeight] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = throttle(() => {
       setScrollHeight(window.scrollY);
-    };
+    }, 50);
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
