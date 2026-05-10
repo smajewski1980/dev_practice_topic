@@ -31,12 +31,8 @@ img {
 
 body {
   font-family: var(--body-font-family);
-  /* padding-block: 1rem; */
+  padding-block-end: 5rem;
   color: #fff;
-
-  /* for now */
-  /* background-color: #aaa; */
-  min-height: 2000px;
 }
 
 a {
