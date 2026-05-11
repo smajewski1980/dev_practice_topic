@@ -6,33 +6,41 @@ const How = () => {
   const refTwo = useRef(null);
   const refThree = useRef(null);
 
+  // need to assemble the rest of the items
+  // linear gradient bg on the lines
+  // change background position to visually move the color down
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          console.log(entry.intersectionRatio);
+          // console.log(entry.intersectionRatio);
+          entry.target.className = `${styles.titleActive} ${styles.title}`;
+          console.log(entry.target);
+        } else {
+          entry.target.className = styles.title;
         }
       },
       {
-        threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
-        rootMargin: "-47% 0px",
+        threshold: [0.5],
+        rootMargin: "0px 0px -47% 0px",
       },
     );
 
     observer.observe(refOne.current);
-    // observer.observe(refTwo.current);
-    // observer.observe(refThree.current);
+    observer.observe(refTwo.current);
+    observer.observe(refThree.current);
 
     return () => {
       if (refOne.current) {
         observer.unobserve(refOne.current);
       }
-      // if (refTwo.current) {
-      //   observer.unobserve(refTwo.current);
-      // }
-      // if (refThree.current) {
-      //   observer.unobserve(refThree.current);
-      // }
+      if (refTwo.current) {
+        observer.unobserve(refTwo.current);
+      }
+      if (refThree.current) {
+        observer.unobserve(refThree.current);
+      }
     };
   }, [refOne, refTwo, refThree]);
 
