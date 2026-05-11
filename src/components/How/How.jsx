@@ -2,18 +2,16 @@ import styles from "./How.module.css";
 import { useEffect, useRef, useState } from "react";
 
 const How = () => {
+  // the refs for the title paragraphs for the intersection observer
   const refOne = useRef(null);
   const refTwo = useRef(null);
   const refThree = useRef(null);
+  // this ref is for the scroll animation
   const textWrapperRef = useRef(null);
-  // const thresholdArray = Array.from({ length: 101 }, (_, i) => i / 100);
+  // this is an array of nums for the observer threshold to seem continuous
   const thresholdArray = Array.from({ length: 81 }, (_, i) => i / 100);
 
-  const [scrollAnimFlag, setScrollAnimFlag] = useState(false);
-
-  // linear gradient bg on the lines
-  // change background position to visually move the color down
-
+  // this is for the title icons color change when scrolled to
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -46,13 +44,16 @@ const How = () => {
     };
   }, [refOne, refTwo, refThree]);
 
+  // this is for the line that changes color as a scroll indicator behind the icons
   useEffect(() => {
+    // i stop observing the wrapper elem at 80% but to get the scroll indicator
+    // to go all the way down, i had to magic number the currRatio multiplier
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           const currRatio = entry.intersectionRatio.toFixed(2);
+
           if (currRatio < 0.8) {
-            console.log(entry.intersectionRatio.toFixed(2));
             entry.target.style.setProperty(
               "--gradient-stop",
               `${currRatio * 120}%`,
