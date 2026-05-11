@@ -1,12 +1,16 @@
 import styles from "./How.module.css";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const How = () => {
   const refOne = useRef(null);
   const refTwo = useRef(null);
   const refThree = useRef(null);
+  const textWrapperRef = useRef(null);
+  // const thresholdArray = Array.from({ length: 101 }, (_, i) => i / 100);
+  const thresholdArray = Array.from({ length: 81 }, (_, i) => i / 100);
 
-  // need to assemble the rest of the items
+  const [scrollAnimFlag, setScrollAnimFlag] = useState(false);
+
   // linear gradient bg on the lines
   // change background position to visually move the color down
 
@@ -14,16 +18,14 @@ const How = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // console.log(entry.intersectionRatio);
           entry.target.className = `${styles.titleActive} ${styles.title}`;
-          console.log(entry.target);
         } else {
           entry.target.className = styles.title;
         }
       },
       {
         threshold: [0.5],
-        rootMargin: "0px 0px -47% 0px",
+        rootMargin: "0px 0px -46% 0px",
       },
     );
 
@@ -44,6 +46,35 @@ const How = () => {
     };
   }, [refOne, refTwo, refThree]);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          const currRatio = entry.intersectionRatio.toFixed(2);
+          if (currRatio < 0.8) {
+            console.log(entry.intersectionRatio.toFixed(2));
+            entry.target.style.setProperty(
+              "--gradient-stop",
+              `${currRatio * 120}%`,
+            );
+          }
+        }
+      },
+      {
+        threshold: thresholdArray,
+        rootMargin: "50% 0px -46% 0px",
+      },
+    );
+
+    observer.observe(textWrapperRef.current);
+
+    return () => {
+      if (textWrapperRef.current) {
+        observer.unobserve(textWrapperRef.current);
+      }
+    };
+  }, [textWrapperRef]);
+
   return (
     <section
       id='how'
@@ -51,7 +82,10 @@ const How = () => {
     >
       <h2 className={styles.howHeading}>How does it work?</h2>
 
-      <div className={styles.howTextWrapper}>
+      <div
+        ref={textWrapperRef}
+        className={styles.howTextWrapper}
+      >
         <p
           ref={refOne}
           className={styles.title}
