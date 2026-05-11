@@ -33,6 +33,9 @@ body {
   font-family: var(--body-font-family);
   padding-block-end: 5rem;
   color: #fff;
+
+  /* for testing */
+  min-height: 3000px;
 }
 
 a {

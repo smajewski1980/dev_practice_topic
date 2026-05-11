@@ -44,6 +44,12 @@
       }
     }
 
+    .title-active {
+      &::before {
+        background-color: red;
+      }
+    }
+
     p {
       margin-block-end: 4rem;
       line-height: 1.8;

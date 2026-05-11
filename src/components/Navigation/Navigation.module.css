@@ -6,6 +6,7 @@
   width: 100dvw;
   padding-block: 1rem;
   z-index: 999;
+  transition: background-color 0.3s ease;
 }
 
 .logo {
@@ -56,6 +57,7 @@
 
 .fixedNav {
   background-color: var(--secondary-color);
+  /* transition: background-color 0.3s ease; */
 }
 /* * {
   outline: 2px solid lime;

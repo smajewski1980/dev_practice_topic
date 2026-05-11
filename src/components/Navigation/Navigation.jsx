@@ -9,6 +9,7 @@ const Navigation = () => {
 
   const [target, setTarget] = useState(null);
   const [scrollHeight, setScrollHeight] = useState(0);
+  const [isNavFixed, setIsNavFixed] = useState(false);
 
   useEffect(() => {
     const handleScroll = throttle(() => {
@@ -21,12 +22,17 @@ const Navigation = () => {
 
   useEffect(() => {
     if (scrollRef.current) {
-      document.startViewTransition(() => {
-        scrollRef.current.className =
-          scrollHeight > 0
-            ? `${styles.fixedNav} ${styles.navigationWrapper}`
-            : styles.navigationWrapper;
-      });
+      if (scrollHeight > 0 && !isNavFixed) {
+        // document.startViewTransition(() => {
+        scrollRef.current.className = `${styles.fixedNav} ${styles.navigationWrapper}`;
+        setIsNavFixed(true);
+        // });
+      } else if (scrollHeight === 0 && isNavFixed) {
+        // document.startViewTransition(() => {
+        scrollRef.current.className = styles.navigationWrapper;
+        setIsNavFixed(false);
+        // });
+      }
     }
   }, [scrollHeight]);
 
