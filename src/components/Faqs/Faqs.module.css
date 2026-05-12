@@ -1,0 +1,76 @@
+.faqSection {
+  color: black;
+  max-width: 90%;
+  margin-inline: auto;
+  padding-block: 3rem;
+
+  /* * {
+    outline: 1px solid lime;
+  } */
+
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-block: 1rem;
+  }
+
+  .contentWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    margin-inline: auto;
+
+    .accordion {
+      padding-inline: 2rem;
+      place-content: center;
+      width: 100%;
+
+      details[open] summary {
+        color: var(--primary-color);
+        background-color: hsl(
+          from var(--custom-btn-bg-hover-color) h s l / 0.3
+        );
+
+        & span {
+          rotate: 180deg;
+        }
+      }
+
+      details::details-content {
+        transition:
+          block-size 0.5s ease,
+          content-visibility 0.4s allow-discrete;
+        block-size: 0;
+        overflow: hidden;
+        padding-inline: 1rem;
+        color: var(--p-color);
+        line-height: 1.7;
+      }
+
+      details[open]::details-content {
+        block-size: auto;
+        padding: 1rem;
+      }
+
+      summary {
+        width: 100%;
+        list-style-type: none;
+        position: relative;
+        font-size: 1.25rem;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        border-radius: 100vw;
+
+        font-weight: 600;
+
+        span {
+          font-size: 1.5rem;
+          transition: rotate 0.3s ease;
+          height: 1.5rem;
+        }
+      }
+    }
+  }
+}

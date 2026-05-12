@@ -15,6 +15,7 @@
   --link-hover-color: #13547a;
   --card-b-rad: 25px;
   scroll-behavior: smooth;
+  interpolate-size: allow-keywords;
 }
 
 *,
@@ -27,6 +28,7 @@
 
 img {
   display: block;
+  max-width: 100%;
 }
 
 body {

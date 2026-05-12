@@ -2,6 +2,7 @@ import styles from "./Homepage.module.css";
 import Hero from "../../components/Hero/Hero";
 import Browse from "../../components/Browse/Browse";
 import How from "../../components/How/How";
+import Faqs from "../../components/Faqs/Faqs";
 
 const Homepage = () => {
   return (
@@ -9,6 +10,7 @@ const Homepage = () => {
       <Hero />
       <Browse />
       <How />
+      <Faqs />
     </>
   );
 };
