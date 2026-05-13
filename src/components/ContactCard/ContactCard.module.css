@@ -1,0 +1,23 @@
+.contactCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  max-width: fit-content;
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    line-height: 1.5;
+    color: var(--p-color);
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      color: var(--custom-btn-bg-color);
+      margin-inline-start: 1rem;
+    }
+  }
+}

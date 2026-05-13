@@ -19,6 +19,7 @@
   /* the ::after visually makes it look not centered because its out of the flow */
   /* slight adj to eyeball it to center */
   transform: translateX(-1.25rem);
+  color: #fff;
 
   li {
     cursor: pointer;

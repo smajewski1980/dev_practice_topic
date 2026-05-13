@@ -3,6 +3,7 @@ import Hero from "../../components/Hero/Hero";
 import Browse from "../../components/Browse/Browse";
 import How from "../../components/How/How";
 import Faqs from "../../components/Faqs/Faqs";
+import Contact from "../../components/Contact/Contact";
 
 const Homepage = () => {
   return (
@@ -11,6 +12,7 @@ const Homepage = () => {
       <Browse />
       <How />
       <Faqs />
+      <Contact />
     </>
   );
 };
