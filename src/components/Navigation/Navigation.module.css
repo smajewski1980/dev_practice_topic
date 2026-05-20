@@ -24,23 +24,68 @@
   li {
     cursor: pointer;
   }
-}
 
+  .btnNavPop {
+    border: none;
+    font: inherit;
+    background-color: transparent;
+    color: currentColor;
+    cursor: pointer;
+    anchor-name: --nav-pop;
+  }
+
+  .navPop {
+    --arrow-size: 15px;
+    border: none;
+    margin-block-start: 1.5rem;
+    padding: 1rem;
+    position-anchor: --nav-pop;
+    top: anchor(bottom);
+    left: calc(anchor(left) - 1rem);
+    border-radius: 10px;
+    overflow: visible;
+    box-shadow: 0 0 20px rgba(0 0 0 / 0.25);
+
+    p {
+      color: var(--primary-color);
+    }
+
+    p:hover {
+      color: var(--p-color);
+    }
+
+    .firstLink {
+      margin-block-end: 0.75rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: 1rem;
+      top: calc((var(--arrow-size) - 2px) * -1);
+      border-left: var(--arrow-size) solid transparent;
+      border-right: var(--arrow-size) solid transparent;
+      border-bottom: var(--arrow-size) solid white;
+    }
+  }
+}
 .activeNavLink {
   color: hsl(from currentColor h s calc(l - 75));
 }
 
-.navDropdown {
+/* .navDropdown {
   position: relative;
-}
+} */
 
-[data-dropdown="true"]::after {
+/* [data-dropdown="true"]::after {
   content: "\2304";
   font-size: 1.5rem;
   position: absolute;
   top: -0.9rem;
   right: -1.125rem;
-}
+} */
 
 .profileIcon {
   width: 2rem;

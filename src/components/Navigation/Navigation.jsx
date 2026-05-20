@@ -83,11 +83,25 @@ const Navigation = () => {
           <li onClick={handleActiveNavLink}>
             <a href='#contact'>CONTACT</a>
           </li>
-          <li
-            data-dropdown={true}
-            className={styles.navDropdown}
-          >
-            PAGES
+          <li>
+            <button
+              className={styles.btnNavPop}
+              popoverTarget='nav-pop'
+            >
+              PAGES <span>&#9662;</span>
+            </button>
+            <div
+              popover={"auto"}
+              id='nav-pop'
+              className={styles.navPop}
+            >
+              <Link href='/'>
+                <p className={styles.firstLink}>TOPICS LISTING</p>
+              </Link>
+              <Link href='/'>
+                <p>CONTACT FORM</p>
+              </Link>
+            </div>
           </li>
         </ul>
       </nav>
