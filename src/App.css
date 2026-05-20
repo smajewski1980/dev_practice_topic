@@ -33,7 +33,6 @@ img {
 
 body {
   font-family: var(--body-font-family);
-  padding-block-end: 5rem;
 
   /* for testing */
   min-height: 3000px;
