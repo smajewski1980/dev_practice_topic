@@ -4,7 +4,6 @@ import Browse from "../../components/Browse/Browse";
 import How from "../../components/How/How";
 import Faqs from "../../components/Faqs/Faqs";
 import Contact from "../../components/Contact/Contact";
-import Footer from "../../components/Footer/Footer";
 
 const Homepage = () => {
   return (
@@ -14,7 +13,6 @@ const Homepage = () => {
       <How />
       <Faqs />
       <Contact />
-      <Footer />
     </>
   );
 };
