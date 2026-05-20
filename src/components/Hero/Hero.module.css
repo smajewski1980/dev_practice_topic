@@ -1,6 +1,7 @@
 .sectionHero {
   background-color: var(--secondary-color);
   border-radius: 0 0 50px 50px;
+  color: white;
 
   .heroInputSection {
     padding-block: 8rem;
