@@ -69,20 +69,25 @@ const Navigation = () => {
             onClick={handleActiveNavLink}
             className={styles.activeNavLink}
           >
-            <a href='#'>HOME</a>
+            <Link to={"/"}>HOME</Link>
           </li>
+
           <li onClick={handleActiveNavLink}>
-            <a href='#browse'>BROWSE TOPICS</a>
+            <Link to={"/#browse"}>BROWSE TOPICS</Link>
           </li>
+
           <li onClick={handleActiveNavLink}>
-            <a href='#how'>HOW IT WORKS</a>
+            <Link to={"/#how"}>HOW IT WORKS</Link>
           </li>
+
           <li onClick={handleActiveNavLink}>
-            <a href='#faqs'>FAQS</a>
+            <Link to={"/#faqs"}>FAQS</Link>
           </li>
+
           <li onClick={handleActiveNavLink}>
-            <a href='#contact'>CONTACT</a>
+            <Link to={"/#contact"}>CONTACT</Link>
           </li>
+
           <li>
             <button
               className={styles.btnNavPop}

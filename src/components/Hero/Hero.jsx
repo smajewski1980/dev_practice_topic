@@ -1,6 +1,7 @@
 import styles from "./Hero.module.css";
 import CardInfo from "../CardInfo/CardInfo";
 import CardCTA from "../CardCTA/CardCTA";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const cardInfoText =
@@ -29,13 +30,15 @@ const Hero = () => {
           </div>
         </div>
         <div className={styles.heroCardSection}>
-          <CardInfo
-            title={"Web Design"}
-            icon={{ color: "#00B3F4", number: "14" }}
-            text={cardInfoText}
-            img={"/images/topics/undraw_Remote_design_team_re_urdx.png"}
-            maxWidth={"325px"}
-          />
+          <Link to={"/web-design"}>
+            <CardInfo
+              title={"Web Design"}
+              icon={{ color: "#00B3F4", number: "14" }}
+              text={cardInfoText}
+              img={"/images/topics/undraw_Remote_design_team_re_urdx.png"}
+              maxWidth={"325px"}
+            />
+          </Link>
           <CardCTA
             img={true}
             icon={{ color: "#0039f4", number: "25" }}

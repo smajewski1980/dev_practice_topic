@@ -5,6 +5,7 @@ import heroImg from "./assets/hero.png";
 import "./App.css";
 import Homepage from "./pages/Hompepage/Homepage";
 import Root from "./components/Root";
+import WebDesign from "./pages/WebDesign/WebDesign";
 import {
   Route,
   Router,
@@ -22,6 +23,10 @@ const router = createBrowserRouter(
       <Route
         index
         element={<Homepage />}
+      />
+      <Route
+        path='/web-design'
+        element={<WebDesign />}
       />
     </Route>,
   ),

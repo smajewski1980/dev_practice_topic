@@ -1,0 +1,51 @@
+.webDesHero {
+  padding-block: 8rem 5rem;
+  background-image: radial-gradient(
+    at top right,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+  color: white;
+
+  .contentWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+
+    .webDesHeroLeftCol {
+      a {
+        color: var(--primary-color);
+      }
+
+      h1 {
+        max-width: 18ch;
+        margin-block: 1rem 2rem;
+        font-size: 3rem;
+        line-height: 1.2;
+      }
+
+      .cta {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        button {
+          padding: 0.5rem 1rem;
+          color: var(--secondary-color);
+          border-radius: 100vw;
+          background-color: transparent;
+          border: 3px solid currentColor;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .webDesHeroRightCol {
+      img {
+        max-width: 500px;
+        border-radius: var(--card-b-rad);
+      }
+    }
+  }
+}
