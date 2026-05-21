@@ -1,0 +1,43 @@
+.webDesMain {
+  max-width: 35rem;
+  margin-inline: auto;
+  padding-block: 5rem;
+  color: var(--p-color);
+
+  h2 {
+    margin-block-end: 1rem;
+    color: black;
+    font-weight: 600;
+  }
+
+  p:nth-child(n + 2):nth-child(-n + 3) {
+    margin-block-end: 1rem;
+  }
+
+  p:nth-child(4) {
+    text-align: center;
+    background-color: var(--section-bg-color);
+    padding: 1.5rem;
+    font-weight: 700;
+    width: 45ch;
+    margin-inline: auto;
+    color: black;
+    margin-block: 2rem;
+  }
+
+  .imgWrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 1rem;
+
+    img {
+      border-radius: 15px;
+    }
+  }
+
+  .caption {
+    font-size: 0.85rem;
+    margin-block-start: 1rem;
+    line-height: 1.5;
+  }
+}
