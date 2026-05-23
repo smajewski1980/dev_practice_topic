@@ -1,0 +1,12 @@
+.contactMain {
+  background-color: var(--section-bg-color);
+
+  .iframe {
+    border-radius: var(--card-b-rad);
+  }
+
+  input {
+    /* for now */
+    display: block;
+  }
+}

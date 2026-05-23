@@ -6,6 +6,7 @@ import "./App.css";
 import Homepage from "./pages/Hompepage/Homepage";
 import Root from "./components/Root";
 import WebDesign from "./pages/WebDesign/WebDesign";
+import Contact from "./pages/Contact/Contact";
 import {
   Route,
   Router,
@@ -27,6 +28,10 @@ const router = createBrowserRouter(
       <Route
         path='/web-design'
         element={<WebDesign />}
+      />
+      <Route
+        path='/contact'
+        element={<Contact />}
       />
     </Route>,
   ),

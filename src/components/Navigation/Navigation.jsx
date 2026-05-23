@@ -100,10 +100,10 @@ const Navigation = () => {
               id='nav-pop'
               className={styles.navPop}
             >
-              <Link href='/'>
+              <Link to='/'>
                 <p className={styles.firstLink}>TOPICS LISTING</p>
               </Link>
-              <Link href='/'>
+              <Link to='/contact'>
                 <p>CONTACT FORM</p>
               </Link>
             </div>
