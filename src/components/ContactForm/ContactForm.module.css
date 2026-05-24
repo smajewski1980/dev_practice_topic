@@ -1,12 +1,67 @@
 .contactMain {
   background-color: var(--section-bg-color);
+  padding-block: 4rem;
 
-  .iframe {
-    border-radius: var(--card-b-rad);
-  }
+  /* * {
+    outline: 1px solid lime;
+  } */
 
-  input {
-    /* for now */
-    display: block;
+  .contentWrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-inline: auto;
+    max-width: 70rem;
+    justify-items: center;
+
+    h2 {
+      font-weight: 600;
+
+      margin-block-end: 1rem;
+    }
+
+    .iframeWrapper {
+      .iframe {
+        border-radius: var(--card-b-rad);
+      }
+
+      p:nth-child(2) {
+        font-weight: 700;
+        font-size: 1.25rem;
+        margin-block: 2rem 0.5rem;
+      }
+    }
+
+    .formWrapper {
+      width: 80%;
+
+      form {
+        input,
+        textArea {
+          width: 100%;
+          border-radius: 100vw;
+          padding: 0.5rem 0.75rem;
+          border: none;
+          outline: 1px solid rgba(0 0 0 / 0.1);
+          margin-block-end: 1rem;
+        }
+
+        textArea {
+          height: 5rem;
+          border-radius: 15px;
+        }
+
+        button {
+          width: 7rem;
+          padding-block: 0.55rem;
+          border-radius: 100vw;
+          border: none;
+          background-color: var(--secondary-color);
+          color: white;
+          margin-inline-start: auto;
+          display: block;
+          cursor: pointer;
+        }
+      }
+    }
   }
 }
