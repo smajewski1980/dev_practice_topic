@@ -10,6 +10,11 @@ const Navigation = () => {
   const [target, setTarget] = useState(null);
   const [scrollHeight, setScrollHeight] = useState(0);
   const [isNavFixed, setIsNavFixed] = useState(false);
+  const [popoverIsOpen, setPopoverIsOpen] = useState(false);
+
+  function handleTogglePopover() {
+    setPopoverIsOpen((prev) => (prev = !prev));
+  }
 
   useEffect(() => {
     const handleScroll = throttle(() => {
@@ -91,22 +96,29 @@ const Navigation = () => {
           <li>
             <button
               className={styles.btnNavPop}
-              popoverTarget='nav-pop'
+              onClick={handleTogglePopover}
             >
               PAGES <span>&#9662;</span>
             </button>
-            <div
-              popover={"auto"}
-              id='nav-pop'
-              className={styles.navPop}
-            >
-              <Link to='/'>
-                <p className={styles.firstLink}>TOPICS LISTING</p>
-              </Link>
-              <Link to='/contact'>
-                <p>CONTACT FORM</p>
-              </Link>
-            </div>
+            {popoverIsOpen && (
+              <div
+                id='nav-pop'
+                className={styles.navPop}
+              >
+                <Link
+                  to='/'
+                  onClick={handleTogglePopover}
+                >
+                  <p className={styles.firstLink}>TOPICS LISTING</p>
+                </Link>
+                <Link
+                  to='/contact'
+                  onClick={handleTogglePopover}
+                >
+                  <p>CONTACT FORM</p>
+                </Link>
+              </div>
+            )}
           </li>
         </ul>
       </nav>

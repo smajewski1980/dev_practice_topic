@@ -39,15 +39,16 @@
     border: none;
     margin-block-start: 1.5rem;
     padding: 1rem;
-    position-anchor: --nav-pop;
-    top: anchor(bottom);
-    left: calc(anchor(left) - 1rem);
     border-radius: 10px;
-    overflow: visible;
+    position-anchor: --nav-pop;
+    left: calc(anchor(left) - 1rem);
     box-shadow: 0 0 20px rgba(0 0 0 / 0.25);
+    position: absolute;
+    background-color: white;
 
     p {
       color: var(--primary-color);
+      white-space: nowrap;
     }
 
     p:hover {
@@ -75,18 +76,6 @@
   color: hsl(from currentColor h s calc(l - 75));
 }
 
-/* .navDropdown {
-  position: relative;
-} */
-
-/* [data-dropdown="true"]::after {
-  content: "\2304";
-  font-size: 1.5rem;
-  position: absolute;
-  top: -0.9rem;
-  right: -1.125rem;
-} */
-
 .profileIcon {
   width: 2rem;
   height: 2rem;
@@ -102,8 +91,4 @@
 
 .fixedNav {
   background-color: var(--secondary-color);
-  /* transition: background-color 0.3s ease; */
 }
-/* * {
-  outline: 2px solid lime;
-} */
