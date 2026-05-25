@@ -106,7 +106,7 @@ const Navigation = () => {
                 className={styles.navPop}
               >
                 <Link
-                  to='/'
+                  to='/topics-listing'
                   onClick={handleTogglePopover}
                 >
                   <p className={styles.firstLink}>TOPICS LISTING</p>

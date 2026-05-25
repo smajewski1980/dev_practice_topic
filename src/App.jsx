@@ -7,6 +7,7 @@ import Homepage from "./pages/Hompepage/Homepage";
 import Root from "./components/Root";
 import WebDesign from "./pages/WebDesign/WebDesign";
 import Contact from "./pages/Contact/Contact";
+import TopicsListing from "./components/TopicsListing/TopicsListing";
 import {
   Route,
   Router,
@@ -32,6 +33,10 @@ const router = createBrowserRouter(
       <Route
         path='/contact'
         element={<Contact />}
+      />
+      <Route
+        path='/topics-listing'
+        element={<TopicsListing />}
       />
     </Route>,
   ),
