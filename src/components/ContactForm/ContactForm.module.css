@@ -27,7 +27,7 @@
       p:nth-child(2) {
         font-weight: 700;
         font-size: 1.25rem;
-        margin-block: 2rem 0.5rem;
+        margin-block: 1rem 0.5rem;
       }
     }
 
@@ -42,17 +42,25 @@
           padding: 0.5rem 0.75rem;
           border: none;
           outline: 1px solid rgba(0 0 0 / 0.1);
+
+          &::placeholder {
+            opacity: 0.5;
+          }
+        }
+
+        input {
           margin-block-end: 1rem;
         }
 
         textArea {
-          height: 5rem;
+          height: 7rem;
           border-radius: 15px;
+          margin-block-end: 0.5rem;
         }
 
         button {
           width: 7rem;
-          padding-block: 0.55rem;
+          padding-block: 0.5rem;
           border-radius: 100vw;
           border: none;
           background-color: var(--secondary-color);
