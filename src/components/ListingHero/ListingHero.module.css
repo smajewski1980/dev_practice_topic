@@ -1,5 +1,6 @@
 .listingHero {
   padding-block: 8rem 3rem;
+  padding-inline-start: 2rem;
   background-image: radial-gradient(
     at top right,
     var(--secondary-color),
