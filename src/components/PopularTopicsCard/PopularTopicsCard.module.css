@@ -1,0 +1,29 @@
+.popularCard {
+  display: flex;
+  margin-inline: auto;
+  width: fit-content;
+  position: relative;
+
+  &::after {
+    content: var(--icon-num);
+    position: absolute;
+    background-color: var(--icon-clr);
+    color: white;
+    right: 0;
+    top: 0;
+  }
+
+  .imgWrapper {
+    width: 250px;
+
+    img {
+      height: 150px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .contentWrapper {
+    flex-basis: 400px;
+  }
+}

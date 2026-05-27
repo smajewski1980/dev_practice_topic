@@ -2,9 +2,6 @@ import styles from "../../components/CardInfo.module.css";
 
 const CardInfo = ({ title, icon, text, img, maxWidth }) => {
   const { color, number } = icon;
-  const iconStyle = {
-    backgoundColor: "red",
-  };
 
   return (
     <div
