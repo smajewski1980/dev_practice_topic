@@ -17,8 +17,7 @@ const PopularTopicsCard = ({ imgSrc, title, icon }) => {
         <h3>{title}</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-          inventore, quibusdam sunt laboriosam beatae iste recusandae, expedita
-          odit ipsa, libero nisi! Asperiores aperiam dignissimos nihil!
+          inventore, quibusdam sunt laboriosam beatae iste recusandae, expedita!
         </p>
         <Link to='#'>
           <button> Learn More</button>
