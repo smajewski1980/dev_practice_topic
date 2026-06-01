@@ -1,5 +1,6 @@
 import styles from "./PopularTopics.module.css";
 import PopularTopicsCard from "../PopularTopicsCard/PopularTopicsCard";
+import PopTopicsNav from "../PopTopicsNav/PopTopicsNav";
 
 const PopularTopics = () => {
   return (
@@ -20,6 +21,7 @@ const PopularTopics = () => {
         title='Podcast'
         icon={["goldenrod", "20"]}
       />
+      <PopTopicsNav />
     </section>
   );
 };

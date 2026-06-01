@@ -1,0 +1,28 @@
+.paginationNav {
+  margin-block: 5rem 2rem;
+  ul {
+    display: flex;
+    list-style-type: none;
+    gap: 0.5rem;
+    width: fit-content;
+    margin-inline: auto;
+
+    li {
+      padding: 0.25rem 0.75rem 0.35rem;
+      color: var(--p-color);
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    li:nth-child(2) {
+      background-color: var(--custom-btn-bg-color);
+      color: white;
+    }
+
+    li:first-child,
+    li:last-child {
+      background-color: hsl(from var(--custom-btn-bg-color) h s l / 0.25);
+      margin-inline: 0.25rem;
+    }
+  }
+}
